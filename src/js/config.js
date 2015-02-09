@@ -20,10 +20,8 @@ requirejs.config({
   ]
 });
 
-console.log("about to require og app.js");
-requirejs(['app/app'],
-  function(App) {
-    console.log("calling App.init");
-    App.init();
+requirejs(['app/config'],
+  function(Config) {
+    Config.init();
   }
 );

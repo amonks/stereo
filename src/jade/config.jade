@@ -1,0 +1,95 @@
+doctype html
+html(lang='en')
+  head
+    title Stereoscope Config
+  meta(charset='utf-8')
+  link(rel="stylesheet", href="config.css")
+body
+  h1
+    a#go(href='#') go to url!
+  #conversion
+    textarea#edit.
+      {
+        "left": {
+          "side": "left",
+          "mode": "fade",
+          "fps": 1,
+          "speed": 5,
+          "frameCount": 0,
+          "r": 100,
+          "g": 0,
+          "b": 0
+        },
+        "right": {
+          "side": "right",
+          "mode": "blink",
+          "fps": 1,
+          "speed": 5,
+          "frameCount": 0,
+          "r": 200,
+          "g": 255,
+          "b": 255
+        }
+      }
+    textarea#show
+  #examples
+    textarea.example.
+      {
+        "left": {
+          "side": "left",
+          "mode": "lines",
+          "lineWidth": 2,
+          "distance": 20,
+          "direction": "vertical",
+          "fps": 24,
+          "speed": 5,
+          "frameCount": 0,
+          "r": 100,
+          "g": 0,
+          "b": 0,
+          "br": 100,
+          "bg": 100,
+          "bb": 100
+        },
+        "right": {
+          "side": "left",
+          "mode": "lines",
+          "lineWidth": 2,
+          "distance": 20,
+          "direction": "vertical",
+          "fps": 24,
+          "speed": -5,
+          "frameCount": 0,
+          "r": 100,
+          "g": 0,
+          "b": 0,
+          "br": 100,
+          "bg": 100,
+          "bb": 100
+        }
+      }
+    textarea.example.
+      {
+        "left": {
+          "side": "left",
+          "mode": "fade",
+          "fps": 1,
+          "speed": 5,
+          "frameCount": 0,
+          "r": 100,
+          "g": 0,
+          "b": 0
+        },
+        "right": {
+          "side": "right",
+          "mode": "blink",
+          "fps": 1,
+          "speed": 5,
+          "frameCount": 0,
+          "r": 200,
+          "g": 255,
+          "b": 255
+        }
+      }
+
+  script(data-main='js/config' src='js/require.js')

@@ -1,9 +1,13 @@
-define(['jquery'], function($) {
-  console.log("loading canvases.coffee");
+define(['jquery', 'app/state'], function($, State) {
+  console.log("loading stereo.coffee");
   var Stereo = {};
   Stereo.init = function() {
-    Stereo.left = $('body').append('<canvas id="left">');
-    Stereo.right = $('body').append('<canvas id="right">');
+    $('body').append('<canvas id="left">');
+    $('body').append('<canvas id="right">');
+    State.setStereo();
+
+    console.log(window.innerWidth / 2, window.innerHeight);
+    State.setSize(window.innerWidth / 2, window.innerHeight);
   };
   return Stereo;
 });

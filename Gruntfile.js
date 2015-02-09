@@ -52,12 +52,13 @@ module.exports = function(grunt) {
     },
 
     'jade': {
-      index: {
+      compile: {
         options: {
           pretty: true
         },
         files: [{
-          "build/index.html": "src/jade/index.jade"
+          "build/index.html": "src/jade/index.jade",
+          "build/config.html": "src/jade/config.jade"
         }]
       }
     },
@@ -68,7 +69,8 @@ module.exports = function(grunt) {
           compress: false
         },
         files: {
-          "build/style.css": "src/stylus/*.styl"
+          "build/style.css": "src/stylus/style.styl",
+          "build/config.css": "src/stylus/config.styl"
         }
       }
     },
@@ -113,7 +115,7 @@ module.exports = function(grunt) {
     'copy:bower',
     'copy:pub',
     'copy:js',
-    'jade:index',
+    'jade:compile',
     'stylus:compile',
   ]);
 
